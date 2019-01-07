@@ -1,0 +1,1 @@
+python train.py --logtostderr --train_dir=/path/to/train --pipeline_config_path=pipeline_config.pbtxt
