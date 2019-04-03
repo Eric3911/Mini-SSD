@@ -14,3 +14,4 @@
 
 
 ![识别结果](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png)
+![识别结果](![识别结果](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png))
