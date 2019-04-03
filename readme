@@ -11,6 +11,4 @@
 署。
 如果你对谷歌的目标检测API使用不熟悉请严格按照我的教程，否则问题很多会导致各种组件之间的编译问题。刚需条件：tensorflow=1.10.0  cuda =8/9训练都可以。
 
-#检测结果
-![](https://github.com/Eric3911/miniDetection/blob/master/Detection/result/00500_640x480.jpg)
-![]()
+![](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png)
