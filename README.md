@@ -1,5 +1,29 @@
 嵌入式目标检测
 
+
+
+	1、我们的模型在小物体检测上的性能会比较好比如武汉大学的飞机（稀疏小目标）。　　
+
+　　2、在检测新长宽比先对粗糙大分辨率使用通道添加注意力下采样层目标上性能提升高（多尺度：操场，飞机，过道）。
+
+　　3、我们模型先对多源粗糙大分辨率使用分离卷积结构下采样层更加速度快。
+
+	4、上采样采取标签平滑和训练初始化权重导致损失变换修改让框画的更加准确
+	
+	
+	在模型根目录底下有个setup.py
+	
+	终端执行   python setup.py  build
+	再执行   python  setup .py install
+	
+	在slim文件下同样有setup.py
+	
+	终端执行   python setup.py  build
+	再执行   python  setup .py install
+	
+	python export_inference_graph.py --input_type image_tensor --pipeline_config_path ./rfcn_resnet101_coco.config 
+	--trained_checkpoint_prefix ./models/train/model.ckpt-5000 --output_directory ./fine_tuned_model
+  
   这个项目从工程硬件综合优化的方法来实现移动端高速检测，声明一下这个模型是我参考谷歌的objectdetectionAPI模型的一个子模型和slim方法改过来测试的，主要
 是为了一个工程产品我们实现嵌入式的使用，考虑到芯片模组之间的计算均衡负担和线程同步问题我们做了相应的设计。
 
