@@ -1,7 +1,7 @@
-嵌入式目标检测
+# 基于SSD的嵌入式目标检测
 
 
-1、我们的模型在小物体检测上的性能会比较好比如武汉大学的飞机（稀疏小目标）。　　
+1、该模型针对嵌入式设计在小物体检测上的性能会比较好，比如西北工业大学的飞机数据集上（稀疏小目标）。　　
 
 2、在检测新长宽比先对粗糙大分辨率使用通道添加注意力下采样层目标上性能提升高（多尺度：操场，飞机，过道）。
 
@@ -9,7 +9,11 @@
 
 4、上采样采取标签平滑和训练初始化权重导致损失变换修改让框画的更加准确
 	
-	
+
+## VOC Dataset
+   VOC2007
+   
+## Training
 	在模型根目录底下有个setup.py
 	终端执行   python setup.py  build
 	再执行   python  setup .py install
@@ -19,9 +23,12 @@
 	终端执行   python setup.py  build
 	再执行   python  setup .py install
 	
+## Evaluation	
+## Installation
 	python export_inference_graph.py --input_type image_tensor --pipeline_config_path ./rfcn_resnet101_coco.config 
 	--trained_checkpoint_prefix ./models/train/model.ckpt-5000 --output_directory ./fine_tuned_model
   
+## Citing mini_SSD
 	 这个项目从工程硬件综合优化的方法来实现移动端高速检测，声明一下这个模型是我参考谷歌的objectdetectionAPI模型的一个子模型和slim方法改过来测试的，主要是为了一个工程产品我们实现嵌入式的使用，考虑到芯片模组之间的计算均衡负担和线程同步问题我们做了相应的设计。
 
 	 目前速度和准确率还存在小问题。希望能与大家交流解决这个问题实现95FPS目标，模型最大的优点在速度相对优势的情况下权重体积是普通模型的100/1分之一左右，对普通问题我们采用该模型一般可以控制在5M内实现模型的部署，权重问题一般在2M以内。
