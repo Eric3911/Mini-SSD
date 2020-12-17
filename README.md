@@ -1,7 +1,10 @@
 # Embedded target detection based on mobilenet SSD
   1. The performance of this model for embedded design in small object detection will be better, such as Northwest University of technology aircraft data set (sparse small target).
+  
   2. In the detection of the new aspect ratio, the coarse and large resolution channel is used to add attention, and the performance of the sample layer target is improved greatly (multi-scale: playground, aircraft, aisle).
+  
   3. In our model, we first use the deconvolution structure for multi-source rough high-resolution, and the sampling layer is faster.
+  
   4. Up sampling adopts label smoothing and training initialization weight, resulting in loss transformation modification, which makes frame drawing more accurate。	
 
 ## VOC Dataset
@@ -46,8 +49,11 @@
   
 ## Citing mini_SSD
   This project realizes high-speed detection of mobile terminal from the comprehensive optimization method of engineering hardware. I declare that this model is modified by referring to a sub model of Google's object detection API model and integrating mobilnetv1 and slim methods. It is mainly for an engineering product. We realize the use of embedded system, taking into account the calculation balance burden and thread synchronization between chip modules We have made the corresponding design.
+  
   At present, there are still some small problems in speed and accuracy. I hope to communicate with you to solve this problem and achieve the goal of 95fps. The biggest advantage of the model is that the weight volume is about 100 / 1 of the ordinary model when the speed is relatively superior. For ordinary problems, we can use this model to realize the deployment of the model within 5m, and the weight problem is generally within 2m.
+  
   i7 CPU on a single PC 300 ms, 1200*960 size pictures. I will complete other relevant parameters. Recently, we have been busy with our own measurement. The accuracy and speed of this target can be further optimized. I will tell you the details in the second edition. Open source will be used to solve the problem of deployment on ARMLinux with a large model and to produce your own idea. In the process of using the model, we need to compile tensorflow source code and deploy TF on related arm.
+  
   If you are not familiar with Google's target detection API, please strictly follow my tutorial, otherwise many problems will lead to compilation problems between various components.
 
 ![识别结果](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png)
