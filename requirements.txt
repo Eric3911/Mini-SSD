@@ -1,8 +1,0 @@
-tensorflow=1.10
-pillow
-
-lxml
-
-jupyter
-
-matplotlib
