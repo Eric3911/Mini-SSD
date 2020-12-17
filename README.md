@@ -56,5 +56,6 @@
   
   If you are not familiar with Google's target detection API, please strictly follow my tutorial, otherwise many problems will lead to compilation problems between various components.
 
-![识别结果](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png)
-![识别结果](https://github.com/Eric3911/miniDetection/blob/master/oiltank_155.jpg)
+![result](https://github.com/Eric3911/miniDetection/blob/master/oilplot_pr.png)
+![result](https://github.com/Eric3911/miniDetection/blob/master/oiltank_155.jpg)
+![result](https://github.com/Eric3911/mini_SSD/blob/master/001.jpg)
